@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<input type="checkbox" id="1">1
+	<input type="checkbox" id="2">2
+	<input type="checkbox" id="3">3
+	<input type="checkbox" id="4">4
+	<input type="checkbox" id="5">5
+	<hr>
+	<!-- <script src="./lazy_load_img.js"></script> -->
+	<script src="./lazy_load_img_simplify.js"></script>
+	<script src="./proxySyncFile.js"></script>
+	<script>
+		//myImg.setSrc('https://images.pexels.com/photos/2037920/pexels-photo-2037920.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+		//proxyImg.setSrc('https://images.pexels.com/photos/2037920/pexels-photo-2037920.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+		proxyImg('https://images.pexels.com/photos/2037920/pexels-photo-2037920.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+
+		let checkboxs = document.getElementsByTagName('input')
+
+		for (let i = 0, checkbox; checkbox = checkboxs[i++];) {
+			checkbox.addEventListener('click', function() {
+				if (this.checked === true) {
+					//syncFiles(this.id)
+					proxySyncFile(this.id)
+				}
+			})
+		}
+	</script>
+</body>
+</html>

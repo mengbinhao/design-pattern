@@ -3,3 +3,4 @@ implement by JS
 
 - Singleton
 - Strategy
+- Proxy

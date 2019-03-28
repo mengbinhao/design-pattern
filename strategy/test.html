@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="loginform" onsubmit="return validate(event)">
+		username: <input type="text" name="username"> <br>
+		password: <input type="password" name="password"> <br>
+		mobile: <input type="text" name="mobile"> <br>
+		<input type="reset">&nbsp;&nbsp;<input type="submit">
+	</form>
+	<script src="./validate_2.js"></script>
+	<script>
+		function validate(event) {
+			let validator = new Validator()
+			let loginForm = document.loginform
+			// validator.add(loginForm.username, 'isNonEmpty', 'username is empty')
+			// validator.add(loginForm.password, 'minLength:6', 'password is too less')
+			// validator.add(loginForm.mobile, 'isMobile', 'mobiel is not correct')
+
+			validator.add(loginForm.username, [
+				{strategy: 'isNonEmpty', errMsg: 'username is empty'},
+				{strategy: 'minLength:6', errMsg: 'username is too less'}
+			])
+
+			validator.add(loginForm.password, [
+				{strategy: 'isNonEmpty', errMsg: 'password is empty'},
+				{strategy: 'minLength:6', errMsg: 'password is too less'}
+			])
+
+			validator.add(loginForm.mobile, [
+				{strategy: 'isMobile', errMsg: 'mobiel is not correct'}
+			])
+
+			let errs = validator.start()
+			if (errs.length) {
+				for (let err of errs) {
+					console.log(err)
+				}
+			}
+			return false
+		}
+	</script>
+</body>
+</html>

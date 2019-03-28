@@ -1,5 +1,5 @@
 // final common lazy Singleton
-let getSingleInstance = function (fn) {
+let getSingleton = function (fn) {
 	let result
 	return function () {
 		return result || (result = fn.apply(this, arguments))
@@ -14,14 +14,14 @@ let createLoginLayer = function () {
 	return div
 }
 
-let cerateSingleLoginLayer = getSingleInstance(createLoginLayer)
+let cerateSingleLoginLayer = getSingleton(createLoginLayer)
 
 document.getElementById('loginBtn').addEventListener('click', function () {
 	let loginLayer = cerateSingleLoginLayer()
 	loginLayer.style.display = 'block'
 })
 
-let createSingelFrame = getSingleInstance(function () {
+let createSingelFrame = getSingleton(function () {
 	let frame = document.createElement('frame')
 	document.body.appendChild(frame)
 	return frame

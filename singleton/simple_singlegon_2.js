@@ -6,7 +6,7 @@ let Singleton = function (name) {
 	this.name = name
 }
 
-Singleton.getInsetance = ((name) => {
+Singleton.getInsetance = (function (name) {
 	let instance = null
 	return function() {
 		if (!instance) {

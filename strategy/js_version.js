@@ -1,4 +1,4 @@
-let strategy = {
+let strategies = {
 	s(salary) {
 		return salary * 5
 	},
@@ -11,7 +11,7 @@ let strategy = {
 }
 
 let calculateBouns = function(level, salary) {
-	return strategy[level](salary)
+	return strategies[level](salary)
 }
 
 console.log(calculateBouns('s', 10000))

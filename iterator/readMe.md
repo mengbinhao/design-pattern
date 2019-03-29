@@ -4,13 +4,6 @@
 4. [lazy Singleton](./simple_singlegon_4.js)
 5. [final lazy Singleton](./simple_singlegon_5.js)
 
-**保证一个类只有一个实例，并提供一个访问它的访问点**
-> window object
->
-> 线程池
->
-> 全局缓存
->
-> 任务管理器
->
-> 登录浮窗
+**提供一个方法顺序访问一个聚合对象中的各个元素，而又不暴露该对象的内部表示**
+- 内部迭代器(倒序、中止)
+- 外部迭代器

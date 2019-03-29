@@ -5,7 +5,7 @@
 5. [proxycache_adcanced.js](./proxycache_adcanced.js)
 
 
-**定义**
+**为一个对象提供一个代用品或占位符,以便控制对它的访问**
 - 保护代理
 - **虚拟代理**
 > image lazy load

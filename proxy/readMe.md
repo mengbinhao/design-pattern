@@ -2,7 +2,7 @@
 2. [lazy_load_img_simple_version](./lazy_load_img_simplify.js)
 3. [合并http request](./proxySyncFile.js)
 4. [proxycache](./proxycache.js)
-5. [proxycache_adcanced.js](./proxycache_adcanced.js)
+5. [proxycache_adcanced.js](./proxycache_advanced.js)
 
 
 **为一个对象提供一个代用品或占位符,以便控制对它的访问**

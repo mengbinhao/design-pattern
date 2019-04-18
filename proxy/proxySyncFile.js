@@ -10,6 +10,7 @@ let proxySyncFile = (function() {
 		if (timer) return
 		timer = setTimeout(function() {
 			syncFiles(cache.join(','))
+			//clear work
 			clearTimeout(timer)
 			timer = null
 			cache.length = 0

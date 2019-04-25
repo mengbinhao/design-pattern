@@ -7,4 +7,5 @@ implement by JS
 - observer
 - iterator
 - adapter
-- decorator(partial)
+- decorator
+- command

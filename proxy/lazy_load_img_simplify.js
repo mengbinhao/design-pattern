@@ -12,6 +12,7 @@ let myImg = (function() {
 let proxyImg = (function() {
 	let img = new Image
 	img.onload = function() {
+		//cb so here this is img
 		myImg(this.src)
 	}
 

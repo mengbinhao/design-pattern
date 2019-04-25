@@ -4,3 +4,7 @@ implement by JS
 - Singleton
 - Strategy
 - Proxy
+- observer
+- iterator
+- adapter
+- decorator(partial)

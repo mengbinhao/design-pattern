@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">click me</button>
+	<script src="./func_aop.js"></script>
+	<script>
+		document.querySelector = document.querySelector.before(function() {
+			console.log('before2')
+		}).before(function() {
+			console.log('before1')
+		}).after(function() {
+			console.log('after1')
+		}).after(function() {
+			console.log('after2')
+		})
+		let btn = document.querySelector('#btn')
+		console.log(btn)
+	</script>
+</body>
+</html>

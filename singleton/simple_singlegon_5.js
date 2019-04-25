@@ -14,10 +14,10 @@ let createLoginLayer = function () {
 	return div
 }
 
-let cerateSingleLoginLayer = getSingleton(createLoginLayer)
+let createSingleLoginLayer = getSingleton(createLoginLayer)
 
 document.getElementById('loginBtn').addEventListener('click', function () {
-	let loginLayer = cerateSingleLoginLayer()
+	let loginLayer = createSingleLoginLayer()
 	loginLayer.style.display = 'block'
 })
 

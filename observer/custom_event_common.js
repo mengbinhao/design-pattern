@@ -1,4 +1,4 @@
-// 1 每个发布者对象都增加爱clientList、trigger、remove，资源浪费
+// 1 每个发布者对象都增加clientList、trigger、remove，资源浪费
 // 2 订阅者需要知道售楼处对象叫salesOffice
 let Observer = {
 	clientList: {},

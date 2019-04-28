@@ -9,3 +9,5 @@ implement by JS
 - adapter
 - decorator
 - command
+- composite
+- template

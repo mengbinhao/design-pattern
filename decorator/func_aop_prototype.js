@@ -14,3 +14,10 @@ Function.prototype.after = function(afterfn) {
 		return ret
 	}
 }
+
+Function.prototype.around = function(beforeFun, afterFun) {
+	var fn = this
+	return function() {
+		return fn.before(beforeFun).after(afterFun).apply(this, arguments)
+	}
+}
